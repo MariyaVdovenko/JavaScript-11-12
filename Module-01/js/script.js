@@ -113,13 +113,13 @@ function task3() {
   console.log(message);
 }
 
-task1();
-console.log('');
-console.log('Задание 2');
-console.log('');
-task2();
+// task1();
+// console.log('');
+// console.log('Задание 2');
+// console.log('');
+// task2();
 
-console.log('');
-console.log('Задание 3');
-console.log('');
-task3();
+// console.log('');
+// console.log('Задание 3');
+// console.log('');
+// task3();
