@@ -24,10 +24,10 @@ function task1() {
   const isCorrect = enterPassword === ADMIN_PASSWORD;
   let message;
 
-  if (isCorrect) {
-    alert((message = 'Добро пожаловать!'));
-  } else if (isCancel) {
+  if (isCancel) {
     alert((message = 'Отменено пользователем!'));
+  } else if (isCorrect) {
+    alert((message = 'Добро пожаловать!'));
   } else if (isWrong) {
     alert((message = 'Доступ запрещен, неверный пароль!'));
   }
@@ -83,32 +83,31 @@ function task2() {
 PS: используй switch
 */
 function task3() {
-  let price;
-  const country = 'Австралия';
+  const country = 'Австралияss';
   const messageNaN = 'В вашей стране доставка не доступна';
 
-  let startOfSeason;
-  const season = 'summer';
+  const price = getPriceForCountry(country);
 
+  if (!!price) {
+    const message = `Доставка в ${country} будет стоить ${price}`;
+    console.log(message);
+  } else {
+    console.log(messageNaN);
+  }
+}
+function getPriceForCountry(country) {
   switch (country) {
     case 'Китай':
-      price = '100 кредитов';
-      break;
+      return '100 кредитов';
     case 'Южная Америка':
-      price = '250 кредитов';
-      break;
+      return '250 кредитов';
     case 'Австралия':
-      price = '170 кредитов';
-      break;
+      return '170 кредитов';
     case 'Индия':
-      price = '80 кредитов';
-      break;
+      return '80 кредитов';
     case 'Ямайка':
-      price = '120 кредитов';
-      break;
+      return '120 кредитов';
     default:
-      console.log(messageNaN);
+      return null;
   }
-  const message = `Доставка в ${country} будет стоить ${price}`;
-  console.log(message);
 }
