@@ -52,7 +52,6 @@ function task2() {
   let isIncorrect;
   const messageCalcel = 'Отменено пользователем';
   const messageCorrect = 'Добро пожаловать!';
-  let message;
 
   do {
     userPassword = prompt('Введите свой пароль:');
@@ -69,11 +68,9 @@ function task2() {
     } else if (isIncorrect) {
       attemptsLeft -= 1;
       if (attemptsLeft > 0) {
-        alert(
-          (message = `Неверный пароль, у вас осталось ${attemptsLeft} попыток`),
-        );
+        alert(`Неверный пароль, у вас осталось ${attemptsLeft} попыток`);
       } else {
-        alert((message = 'У вас закончились попытки, аккаунт заблокирован!'));
+        alert('У вас закончились попытки, аккаунт заблокирован!');
       }
     }
   } while (attemptsLeft > 0);
