@@ -2,6 +2,7 @@
 import quizData from './quiz-data.js';
 
 const testQuestionForm = document.querySelector('.js-test-question-form');
+console.log(testQuestionForm);
 const buttonCheck = document.querySelector('.let-check');
 
 const test = createTestForm(quizData);
@@ -46,25 +47,47 @@ function createTestForm({ title, questions }) {
     });
   });
   console.log(container);
+
   return container;
 }
 
 testQuestionForm.addEventListener('submit', handleSubmit);
-const correctAnswers = {};
-quizData.questions.forEach(function(question, questionNum) {
-  correctAnswers[`question${questionNum}`] = question.answer;
-});
-
-console.log(correctAnswers);
 
 const result = {};
+let answerIsCorrect;
+let answerIsInorrect;
+let resultMessage;
 
 function handleSubmit(event) {
   event.preventDefault();
 
   const formData = new FormData(event.currentTarget);
   formData.forEach((value, name) => {
-    result[name] = Number(value);
+    result[name] = value;
   });
-  console.log(result);
+
+  checkResult(result);
+}
+
+function checkResult(result) {
+  const userAnswer = Object.values(result);
+  answerIsCorrect = 0;
+  answerIsInorrect = 0;
+  userAnswer.forEach((answ, i) => {
+    if (Number(answ) === quizData.questions[i].answer) {
+      answerIsCorrect += 1;
+    } else {
+      answerIsInorrect += 1;
+    }
+  });
+
+  const inPercentage = (answerIsCorrect / quizData.questions.length) * 100;
+
+  if (inPercentage < 80) {
+    resultMessage = `Вы ответили не правильно на ${answerIsInorrect} вопросов. Тест не пройден :(`;
+  } else {
+    resultMessage = `Вы ответили правильно на ${answerIsCorrect} вопросов. Поздравляем! Тест пройден!'`;
+  }
+
+  alert(resultMessage);
 }
