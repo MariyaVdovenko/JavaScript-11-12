@@ -37,6 +37,7 @@ function createGallery(galleryItemsData) {
 
 gallery.addEventListener('click', openModal);
 const overlay = document.querySelector('.overlay');
+const overlayImg = document.querySelector('.overlay-img');
 
 function openModal(e) {
   e.preventDefault();
@@ -45,7 +46,6 @@ function openModal(e) {
   }
 
   overlay.classList.add('is-visible');
-  const overlayImg = document.querySelector('.overlay-img');
   overlayImg.setAttribute('src', e.target.dataset.source);
   window.addEventListener('keydown', handleKeyPress);
 }
@@ -60,6 +60,7 @@ overlay.addEventListener('click', handleBackDropClick);
 function closeModal() {
   overlay.classList.remove('is-visible');
   window.removeEventListener('keydown', handleKeyPress);
+  overlayImg.removeAttribute('src');
 }
 // Escape
 function handleKeyPress(e) {
