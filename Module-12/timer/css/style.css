@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  min-height: 100vh;
+  font-size: 50px;
+
+  background: linear-gradient(#a6fcde, transparent 1px),
+    linear-gradient(90deg, #acacac, transparent 1px);
+  background-size: 30px 30px;
+  background-position: center center;
+}
+
+.timer {
+  display: flex;
+  background-color: grey;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px;
+  background-color: rgb(199, 192, 192);
+}
+
+.label {
+  font-style: italic;
+  color: rgb(40, 66, 57);
+}
+
+.value {
+  font-size: 200px;
+  color: rgb(13, 66, 48);
+}
