@@ -5,7 +5,7 @@ import fetchWeather from './fetchWeather';
 import weatherMarkup from './weatherMarkup';
 
 import PNotify from 'pnotify/dist/es/PNotify';
-import 'pnotify/dist/es/PNotifyStyleMaterial.js';
+import PNotifyStyleMaterial from 'pnotify/dist/es/PNotifyStyleMaterial.js';
 import '../node_modules/pnotify/dist/PNotifyBrightTheme.css';
 import 'material-design-icons/iconfont/material-icons.css';
 
