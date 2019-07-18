@@ -1,7 +1,7 @@
 {
-  "name": "webpack-starter-kit",
+  "name": "home-work-13",
   "version": "1.1.0",
-  "description": "",
+  "description": "[Живая страница](https://mariyavdovenko.github.io/JavaScript-11-12/Module-11/) после деплоя через `npm run deploy`.",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --env.mode development --config ./webpack/config.js",
