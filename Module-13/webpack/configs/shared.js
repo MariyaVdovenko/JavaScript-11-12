@@ -23,7 +23,7 @@ module.exports = env => ({
           {
             loader: 'url-loader',
             options: {
-              name: '[path][name].[ext]',
+              name: '[name].[ext]',
               limit: 10000,
               mimetype: 'application/font-woff',
               fallback: 'file-loader',

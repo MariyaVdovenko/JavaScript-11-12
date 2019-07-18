@@ -1,5 +1,5 @@
 # production
-# /build
+/build
 
 # Logs
 logs
@@ -33,11 +33,10 @@ bower_components
 .lock-wscript
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
-# build/Release
+build/Release
 
 # Dependency directories
-node_modules/*
-!*/node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff2
+node_modules/
 jspm_packages/
 
 # Typescript v1 declaration files
