@@ -36,8 +36,8 @@ bower_components
 # build/Release
 
 # Dependency directories
-node_modules/
-!node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff2
+node_modules/*
+!*/node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff2
 jspm_packages/
 
 # Typescript v1 declaration files
