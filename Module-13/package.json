@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "core-js": "^3.1.4",
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.7.7",
     "material-design-icon-fonts": "^3.0.1",
     "material-design-icons": "^3.0.1",
     "pnotify": "^4.0.0"
